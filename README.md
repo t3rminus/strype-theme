@@ -22,6 +22,7 @@
 [![Google Lighthouse accessibility score](https://img.shields.io/badge/Google%20Lighthouse%20accessibility%20score-100-brightgreen)](https://developers.google.com/web/tools/lighthouse)
 [![License](https://img.shields.io/badge/license-Apache%20Version%202.0-red)](https://github.com/HubSpot/cms-theme-boilerplate/blob/main/LICENSE)
 
+
 ## Purpose
 
 The [HubSpot CMS Boilerplate](https://designers.hubspot.com/docs/building-blocks/themes/hubspot-cms-boilerplate) is designed to offer developers a head start in the website building process. While the HubSpot CMS Boilerplate represents HubSpot's opinionated best practices, we intend to learn from similar projects and feedback. We hope it offers inspiration and utility for all website projects!
