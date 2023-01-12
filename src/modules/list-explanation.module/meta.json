@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 98192619435,
+  "label" : "List & Explanation",
+  "is_available_for_new_content" : true
+}

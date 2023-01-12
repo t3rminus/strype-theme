@@ -1,0 +1,47 @@
+<!-- module html  -->
+{{ require_js("https://code.jquery.com/jquery-3.6.3.min.js") }}
+{{ require_js("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js") }}
+{{ require_css("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css") }}
+{% require_css %}
+  <style>
+  .testimonials__nav-item.slick-current .testimonials__photo {
+    outline-color: {{ theme.global_colors.primary.color }};
+  }
+  </style>
+{% end_require_css %}
+<div class="testimonials">
+  <div class="testimonials__content">
+  {% for item in module.testimonials %}
+    <div class="testimonials__content-item">
+      {{ item.testimonial_content }}
+    </div>
+  {% endfor %}
+  </div>
+  <div class="testimonials__nav-wrapper">
+    <div class="testimonials__nav">
+    {% for item in module.testimonials %}
+      <div class="testimonials__nav-item">
+        <img src="{{ item.photo.src }}" alt="{{ item.persons_name }}" class="testimonials__photo" />
+        <h4 class="testimonials__name">{{ item.persons_name }}</h4>
+        <div class="testimonials__star" title="{{ item.stars }}-star Rating">
+          {% for x in range(0,item.stars) %}
+            <svg viewBox="0 0 17 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.85463 12.9401L13.8883 15.9758L12.5566 10.2506L16.9998 6.40035L11.1426 5.8978L8.85463 0.5L6.56666 5.8978L0.709473 6.40035L5.15266 10.2506L3.82092 15.9758L8.85463 12.9401Z" />
+            </svg>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+  <button class="testimonals__next js-prev">
+    <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.707085,0.292893 C8.316555,-0.0976311 7.683395,-0.0976311 7.292865,0.292893 L0.292875,7.29289 C-0.097625,7.68342 -0.097625,8.31658 0.292875,8.70711 L7.292865,15.7071 C7.683395,16.0976 8.316555,16.0976 8.707085,15.7071 C9.097605,15.3166 9.097605,14.6834 8.707085,14.2929 L3.414175,8.99999993 L14.999975,8.99999993 C15.55226,8.99999993 15.999975,8.55228 15.999975,7.99999993 C15.999975,7.44772 15.55226,6.99999993 14.999975,6.99999993 L3.414175,6.99999993 L8.707085,1.70711 C9.097605,1.31658 9.097605,0.683417 8.707085,0.292893 Z" />
+    </svg>
+  </button>
+  <button class="testimonals__prev js-next">
+    <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L12.5858 9H1C0.447715 9 0 8.55228 0 8C0 7.44772 0.447715 7 1 7H12.5858L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" />
+    </svg>
+  </button>
+</div>

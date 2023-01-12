@@ -1,0 +1,120 @@
+.testimonials {
+  position: relative;
+  padding: 0 158px;
+}
+
+.testimonials__content {
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.testimonials__content-item {
+  text-align: center;
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+.testimonials__nav-wrapper {
+  margin: 0 auto;
+  width: 55%;
+}
+
+.testimonials__photo {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.testimonials__star {
+  color: #D39A06;
+}
+
+.testimonials__star svg {
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+}
+
+.testimonials__nav-item {
+  padding: 14px;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+
+.testimonials__nav-item .testimonials__photo {
+  margin: 0 auto;
+  transform: scale(80%);
+  transition: all 200ms ease-in-out;
+  outline: 0px solid;
+}
+
+.testimonials__nav-item .testimonials__star,
+.testimonials__nav-item .testimonials__name {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  margin-left: -100px;
+  width: 200px;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.testimonials__nav-item .testimonials__name {
+  color: black;
+  bottom: 24px;
+}
+
+.testimonials__nav-item .testimonials__star {
+  bottom: 0;
+}
+
+.testimonials__nav-item.slick-current .testimonials__photo {
+  transform: scale(100%);
+  outline: 7px solid;
+}
+
+.testimonials__nav-item.slick-current .testimonials__star,
+.testimonials__nav-item.slick-current .testimonials__name {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.testimonals__next,
+.testimonals__prev {
+  color: #000;
+  background: transparent;
+  width: 56px;
+  height: 56px;
+  border: 1px solid;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.testimonals__prev {
+  left: auto;
+  right: 0;
+}
+
+.testimonals__next svg,
+.testimonals__prev svg {
+  display: block;
+  margin: 0 auto;
+  width: 18px;
+  height: 18px;
+}
+
+.testimonials__nav.slick-few .slick-list {
+  overflow: visible !important;
+}
+
+.testimonials__nav.slick-few .slick-track {
+  transform: none !important;
+}

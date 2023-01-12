@@ -1,0 +1,20 @@
+<!-- module html  -->
+<div class="contact-map">
+  <address class="contact-map__address">
+    <svg viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.00008 0C3.58908 0 8.14446e-05 3.589 8.14446e-05 7.995C-0.0289186 14.44 7.69608 19.784 8.00008 20C8.00008 20 16.0291 14.44 16.0001 8C16.0001 3.589 12.4111 0 8.00008 0ZM8.00008 12C5.79008 12 4.00008 10.21 4.00008 8C4.00008 5.79 5.79008 4 8.00008 4C10.2101 4 12.0001 5.79 12.0001 8C12.0001 10.21 10.2101 12 8.00008 12Z" />
+    </svg>
+    <span>{{ module.address | replace("\n", "<br />") }}</span>
+  </address>
+  <a href="tel:{{ module.phone_number | regex_replace("[^0-9-p+]", "") }}" class="contact-map__tel">
+    <svg viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.55 7.69167C4.93056 10.4528 7.29722 12.7208 10.0583 14.2L12.2278 12.0306C12.5236 11.7347 12.9181 11.6361 13.2139 11.8333C14.2986 12.2278 15.4819 12.425 16.7639 12.425C17.3556 12.425 17.75 12.8194 17.75 13.4111V16.7639C17.75 17.3556 17.3556 17.75 16.7639 17.75C7.49444 17.75 0 10.2556 0 0.986111C0 0.394444 0.394444 0 0.986111 0H4.4375C5.02917 0 5.42361 0.394444 5.42361 0.986111C5.42361 2.16944 5.62083 3.35278 6.01528 4.53611C6.11389 4.83194 6.01528 5.22639 5.81806 5.52222L3.55 7.69167Z" />
+    </svg>
+    <span>{{ module.phone_number }}</span>
+  </a>
+  {% if module.map_image.src is truthy %}
+  <div class="contact-map__image">
+    <img src="{{module.map_image.src}}" alt="Map" />
+  </div>
+  {% endif %}
+</div>

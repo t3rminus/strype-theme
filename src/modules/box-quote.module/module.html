@@ -1,0 +1,17 @@
+<!-- module html  -->
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .box-quote__content {
+        background-color: {{ theme.global_colors.primary.color }};
+      }
+  {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="box-quote">
+  <div class="box-quote__content">
+    <div class="box-quote__quote">{{ module.quote }}</div>
+    <div class="box-quote__attrib">{{ module.attribution }}</div>
+  </div>
+</div>
