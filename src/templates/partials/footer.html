@@ -1,63 +1,43 @@
-{% module "main-nav-2"
-  path="../../modules/bottom-highlight",
-  label="Bottom Highlight"
-%}
+<!--
+  templateType: global_partial
+  label: Footer
+-->
 <footer class="footer">
-  <div class="footer__content">
-    {% dnd_area "footer" %}
-      {% dnd_section vertical_alignment="TOP" %}
-        {% dnd_column offset=0, width=3 %}
-          {% dnd_row %}
-            {% dnd_module "site_logo" path="@hubspot/logo" %}
-            {% end_dnd_module %}
-          {% end_dnd_row %}
-          {% dnd_row %}
-            {% dnd_module "footer_content" path='@hubspot/rich_text' %}
-              {% module_attribute "html"%}
-                <p>
-                  We represent clients throughout the
-                  Greater Toronto Area (GTA) and
-                  surrounding communities.
-                </p>
-                <p>
-                  Our top priority is helping you
-                  rebuild your life in the months
-                  after suffering a catastrophic
-                  injury.
-                </p>
-              {% end_module_attribute %}
-            {% end_dnd_module %}
-          {% end_dnd_row %}
-        {% end_dnd_column %}
-        {% dnd_column offset=3, width=3 %}
-          {% dnd_row %}
-            {% dnd_module "footer_menu_1" path="../../modules/simple-menu" %}
-            {% end_dnd_module %}
-          {% end_dnd_row %}
-        {% end_dnd_column %}
-        {% dnd_column offset=6, width=3 %}
-          {% dnd_row %}
-            
-          {% end_dnd_row %}
-        {% end_dnd_column %}
-        {% dnd_column offset=9, width=3 %}
-          {% dnd_row %}
-            
-          {% end_dnd_row %}
-        {% end_dnd_column %}
-      {% end_dnd_section %}
-    {% end_dnd_area %}
-  </div>
-  <div class="footer__bottom">
-    <div class="content-wrapper">
-      <div class="footer__row">
-        <div class="footer__bottom-item">
-          &copy; Copyright - Strype Injury Lawyers
-        </div>
-        <div class="footer__bottom-item">
-          Disclaimer & Privacy Policy
-        </div>
-      </div>
-    </div>
-  </div>
+  {% dnd_area "footer"
+    label="Footer",
+    class="footer__container content-wrapper"
+  %}
+
+    {# Social follow and copyright #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../../modules/social-follow" %}
+            {% module_attribute "social_link" is_json=True %}
+              [
+                {"social_account": "facebook-f"},
+                {"social_account": "linkedin-in"},
+                {"social_account": "twitter"},
+                {"social_account": "instagram"}
+              ]
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row
+          margin={
+            "top": 12,
+            "bottom": 12
+          }
+        %}
+          {% dnd_module
+            path="@hubspot/rich_text",
+            html='<div style="text-align: center; font-size: 0.7rem;"><span>© {{ year }} All rights reserved.</span></div>'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
 </footer>

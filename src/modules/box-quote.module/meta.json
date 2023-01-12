@@ -1,7 +1,0 @@
-{
-  "global" : false,
-  "host_template_types" : [ "PAGE", "BLOG_POST" ],
-  "module_id" : 98197746597,
-  "label" : "Box Quote",
-  "is_available_for_new_content" : false
-}

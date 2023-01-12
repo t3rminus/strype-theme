@@ -9,47 +9,20 @@
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.6.3",
-    "@wordpress/babel-preset-default": "^4.9.0",
-    "autoprefixer": "^9.1.5",
-    "babel-loader": "^8.0.4",
-    "babelify": "^10.0.0",
-    "browser-sync": "^2.18.13",
-    "browserify": "^16.5.0",
+    "autoprefixer": "^9.0.0",
     "eslint": "^7.9.0",
-    "globby": "^11.0.0",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-debug": "^4.0.0",
-    "gulp-flatmap": "^1.0.2",
-    "gulp-load-plugins": "^1.1.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.2",
-    "gulplog": "^1.0.0",
     "js-yaml": "^3.14.0",
     "postcss-cli": "^7.0.0",
-    "prettier": "^2.1.2",
-    "sass": "^1.57.1",
-    "through2": "^3.0.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "prettier": "^2.1.2"
   },
   "scripts": {
     "autoprefixer": "postcss src/css/**/*.css src/modules/**/*.css !src/**/_layout.css !src/**/_normalize.css !src/**/_reset.css !src/**/_macros.css !src/**/main.css !src/**/theme-overrides.css --use autoprefixer --replace --no-map",
     "eslint": "eslint src",
     "lint": "eslint src && prettier --list-different 'src/**/*.js' 'src/**/*.json'",
-    "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'",
-    "watch": "hs watch src strype-test"
+    "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'"
   },
   "browserslist": [
-    "defaults"
-  ],
-  "dependencies": {
-    "gulp": "^4.0.2"
-  }
+    "defaults",
+    "IE 11"
+  ]
 }

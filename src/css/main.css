@@ -1,28 +1,16 @@
-/* Navigation skipper */
-.header__skip, .menu__child-toggle {
-  height: 1px !important;
-  width: 1px !important;
-  left: -1000px !important;
-  top: -1000px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-  position: absolute !important;
-  text-align: left !important;
-}
+/* Theme base styles */
 
-.header__skip:hover,
-.header__skip:focus,
-.header__skip:active,
-.menu__child-toggle:hover,
-.menu__child-toggle:focus,
-.menu__child-toggle:active {
-  height: auto;
-  left: 0;
-  overflow: visible;
-  top: 0;
-  width: auto;
-}
+/* Tools
+Any animations, or functions used throughout the project.
+Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
+*/
+
+/* Generic
+This is where reset, normalize & box-sizing styles go.
+*/
+
+{% include './generic/_reset.css' %}
+{% include './generic/_normalize.css' %}
 
 /* Objects
 Non-cosmetic design patterns including grid and layout classes)
@@ -30,3 +18,25 @@ Non-cosmetic design patterns including grid and layout classes)
 
 {% include './objects/_layout.css' %}
 {% include './objects/_containers-dnd.css' %}
+
+/* Elements
+Base HMTL elements are styled in this section (<body<, <h1>, <a>, <p>, <button> etc.)
+*/
+
+{% include './elements/_typography.css' %}
+{% include './elements/_buttons.css' %}
+{% include './elements/_forms.css' %}
+{% include './elements/_tables.css' %}
+
+/* Components
+Specific pieces of UI that are stylized. Typically used for global partial styling
+*/
+
+{% include './components/_header.css' %}
+{% include './components/_default-modules.css' %}
+
+/* Utilities
+Helper classes with ability to override anything that comes before it
+*/
+
+{% include './utilities/_helper.css' %}
