@@ -1,0 +1,102 @@
+// Work around Hubspot's wrapping of global resources
+div[data-global-resource-path$="/header.html"] {
+  z-index: 100;
+  position: sticky;
+  top: -1px;
+  display: block;
+  height: 0;
+  overflow: visible;
+}
+
+.header {
+  position: relative;
+  transition: background-color 200ms ease-in-out;
+  background-color: transparent;
+}
+
+.header * {
+  z-index: 101;
+  color: #FFF;
+}
+
+.header::before {
+  content: ' ';
+  pointer-events: none;
+  height: 715px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(180deg, #000F1B 0%, rgba(0, 15, 27, 0) 29.52%);
+  opacity: 0.7;
+  transition: opacity 200ms ease-in-out;
+}
+
+.is-stuck {
+  .header {
+    background-color: $secondary;
+  }
+  .header::before {
+    opacity: 0;
+  }
+}
+
+.hs-inline-edit {
+  .header {
+    height: auto;
+    background-color: $secondary;
+  }
+
+  .header::after {
+    display: none;
+  }
+}
+
+.header__row {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.header__row--right {
+  justify-content: flex-end;
+}
+
+.header__logo {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.header__navigation > * {
+  height: 100%;
+}
+
+.header__cta {
+  display: flex;
+  align-items: center;
+}
+
+.header__cta-button a {
+  display: block;
+  border: 1px solid #FFF;
+  font-weight: bold;
+  border-radius: 200px;
+  padding: 1rem 2rem;
+  transition: background-color 200ms ease-in-out;
+  background-color: transparent;
+}
+
+.header__cta-button a::after {
+  content: '\f061';
+  margin-left: 0.3rem;
+  font: var(--fa-font-solid);
+}
+
+.header__cta-button a:hover {
+  color: #FFF;
+  font-weight: bold;
+  background-color: rgba(255,255,255,0.1);
+}

@@ -1,0 +1,17 @@
+.top-header {
+  background-color: $secondary;
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  z-index: 100;
+
+  * {
+    color: $white;
+  }
+
+  .dnd-section {
+    padding: 0;
+  }
+}

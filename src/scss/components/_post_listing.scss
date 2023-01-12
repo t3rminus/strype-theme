@@ -1,0 +1,20 @@
+.widget-type-post_listing {
+  h3 {
+    display: none;
+  }
+
+  .widget-module ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .widget-module ul a {
+    margin: 0 0 1rem;
+    display: block;
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}

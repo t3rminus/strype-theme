@@ -1,0 +1,23 @@
+[ {
+  "id" : "bfff5c2b-0ce1-6bad-0f08-fdb48eb3e4f0",
+  "name" : "quote",
+  "display_width" : null,
+  "label" : "Quote",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : true,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "3102b684-05ce-2844-28ec-ba282538c40a",
+  "name" : "attribution",
+  "display_width" : null,
+  "label" : "Attribution",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : true,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

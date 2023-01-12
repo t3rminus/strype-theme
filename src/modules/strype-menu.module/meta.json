@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "label" : "Strype Menu",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 96665282220,
+  "is_available_for_new_content" : true
+}
