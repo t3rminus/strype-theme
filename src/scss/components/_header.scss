@@ -62,6 +62,7 @@ div[data-global-resource-path$="/header.html"] {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .header__row--right {
@@ -126,6 +127,7 @@ div[data-global-resource-path$="/header.html"] {
     pointer-events: all;
     background-color: transparent;
     position: static;
+    width: auto;
   }
 }
 
@@ -158,6 +160,7 @@ div[data-global-resource-path$="/header.html"] {
   border: 1px solid $white;
   color: $white;
   font-weight: bold;
+  font-size: 1rem;
   border-radius: 200px;
   padding: 0.5rem 2rem;
   transition: background-color 200ms ease-in-out;
@@ -168,13 +171,22 @@ div[data-global-resource-path$="/header.html"] {
   .header__cta {
     opacity: 1;
     pointer-events: all;
+    transform: none;
     position: static;
     width: auto;
     height: auto;
     background-color: transparent;
   }
   .header__cta-button a {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@include desktop {
+  .header__cta-button a {
     padding: 1rem 2rem;
+    font-size: 1rem;
   }
 }
 

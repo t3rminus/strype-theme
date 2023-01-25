@@ -1,20 +1,12 @@
-{% set mobilebreak = 768 %}
-{% set tabletbreak = 1024 %}
-
 .list-explanation {
   display: block;
-}
-
-.list-explanation__left,
-.list-explanation__right {
-  
 }
 
 .list-explanation__left {
   margin-bottom: 2rem;
 }
 
-@media (min-width: {{ tabletbreak }}px) {
+@media (min-width: 1024px) {
   .list-explanation {
     display: flex;
     justify-content: center;
