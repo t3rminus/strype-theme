@@ -3,70 +3,19 @@
 {% require_css %}
   <style>
     {% scope_css %}
-      {% set circle_size = 52 %}
-
-      .button-wrapper {
-        padding: {{ circle_size }}px 0 {{ circle_size }}px {{ circle_size }}px;
-      }
-
       {% if module.styles.alignment.alignment %}
-        .button-wrapper {
+        .strype-button--module {
           text-align: {{ module.styles.alignment.alignment.horizontal_align }};
         }
       {% endif %}
 
-      .button {
-        display: inline-block;
-        z-index: 0;
-        position: relative;
-        font-weight: bold;
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        padding-right: 32px;
+      .strype-button--module .strype-button__link {
         {% if module.styles.text.color.color %}
-          color: rgba({{ module.styles.text.color.color|convert_rgb }}, {{ module.styles.text.color.opacity / 100 }});
+          color: rgba({{ module.styles.text.color.color | convert_rgb }}, {{ module.styles.text.color.opacity / 100 }});
         {% endif %}
 
         {{ module.styles.spacing.spacing.css }}
       }
-
-      .button::before {
-        content: '\200B';
-        display: block;
-        position: absolute;
-        width: {{ (circle_size - 10) * 2 }}px;
-        height: {{ (circle_size - 10) * 2 }}px;
-        top: -{{ circle_size - 10 }}px;
-        top: calc(-{{ circle_size - 10 }}px + 0.6rem);
-        left: -{{ circle_size - 10 }}px;
-        background-color: {{ theme.global_colors.primary.color }};
-        border-radius: 50%;
-        z-index: -1;
-        outline: 10px solid rgba({{ theme.global_colors.primary.color | convert_rgb }}, 0.6);
-        transition: all 200ms ease-in-out;
-      }
-
-      .button:hover::before,
-      .button:focus::before {
-        outline: 16px solid rgba({{ color_variant(theme.global_colors.primary.color, 20) | convert_rgb }}, 0.6);
-        background-color: {{ color_variant(theme.global_colors.primary.color, 20) }};
-      }
-
-      .button:active::before {
-        outline: 10px solid rgba({{ color_variant(theme.global_colors.primary.color, -20) | convert_rgb }}, 0.6);
-        background-color: {{ color_variant(theme.global_colors.primary.color, -20) }};
-      }
-
-      .button svg {
-        width: 16px;
-        height: 16px;
-        display: block;
-        position: absolute;
-        top: 0;
-        top: calc(1.2rem - 17px);
-        right: 8px;
-      }
-
     {% end_scope_css %}
   </style>
 {% end_require_css %}
@@ -87,12 +36,12 @@
 
 {# Button #}
 
-<div class="button-wrapper">
-  <a class="button" href="{{ href }}"
+<div class="strype-button strype-button--module">
+  <a class="strype-button__link" href="{{ href }}"
   {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
   {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
   >
     {{ module.button_text }}
-    <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L12.5858 9H1C0.447715 9 0 8.55228 0 8C0 7.44772 0.447715 7 1 7H12.5858L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" /></svg>
+    <svg class="strype-button__arrow" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L12.5858 9H1C0.447715 9 0 8.55228 0 8C0 7.44772 0.447715 7 1 7H12.5858L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" /></svg>
   </a>
 </div>

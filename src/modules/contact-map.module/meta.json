@@ -1,7 +1,7 @@
 {
   "global" : false,
   "host_template_types" : [ "PAGE", "BLOG_POST" ],
-  "module_id" : 97904163840,
+  "module_id" : 98199532875,
   "label" : "Contact Map",
   "is_available_for_new_content" : true
 }

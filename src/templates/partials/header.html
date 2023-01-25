@@ -5,6 +5,7 @@
 <header class="header">
   <div class="content-wrapper">
     <div class="header__row header__wrap">
+      <input type="checkbox" id="mobile-toggle" class="header__mobile-check" />
       <div class="header__logo header__logo--main">
         {% module "site_logo" path="@hubspot/logo" %}
       </div>
@@ -20,6 +21,9 @@
           extra_classes="header__cta-button"
         %}
       </div>
+      <label class="header__mobile-toggle" for="mobile-toggle">
+        <span class="header__mobile-text">Toggle Navigation Menu</span>
+      </label>
     </div>
   </div>
 </header>

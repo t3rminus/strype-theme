@@ -1,0 +1,47 @@
+// Breakpoints
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin tabletlandscape {
+  @media (min-width: #{$breakpoint-tabletlandscape}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin fullsize {
+  @media (min-width: #{$breakpoint-fullsize}) {
+    @content;
+  }
+}
+
+// Visibility
+@mixin mobile-only {
+  display: block !important;
+
+  @include tablet {
+    display: none !important;
+  }
+}
+
+@mixin tablet-up {
+  display: none !important;
+
+  @include tablet {
+    display: block !important;
+  }
+}
+
+@mixin hide-text {
+  overflow: hidden;
+  font-size: 0.001px;
+  color: transparent;
+}

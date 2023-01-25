@@ -68,6 +68,7 @@
 .testimonials__nav-item .testimonials__name {
   color: black;
   bottom: 24px;
+  font-weight: bold !important;
 }
 
 .testimonials__nav-item .testimonials__star {
@@ -111,10 +112,11 @@
   height: 18px;
 }
 
-.testimonials__nav.slick-few .slick-list {
-  overflow: visible !important;
-}
-
-.testimonials__nav.slick-few .slick-track {
-  transform: none !important;
+@media (min-width: 1024px) {
+  .testimonials__nav.slick-few .slick-list {
+    overflow: visible !important;
+  }
+  .testimonials__nav.slick-few .slick-track {
+    transform: none !important;
+  }
 }

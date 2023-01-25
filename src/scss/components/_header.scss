@@ -16,7 +16,13 @@ div[data-global-resource-path$="/header.html"] {
 
 .header * {
   z-index: 101;
-  color: #FFF;
+  color: $black;
+}
+
+@include tabletlandscape {
+  .header * {
+    color: $white;
+  }
 }
 
 .header::before {
@@ -68,25 +74,108 @@ div[data-global-resource-path$="/header.html"] {
   flex-direction: column;
   justify-content: center;
   padding: 0.5rem 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    width: 120px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+@include tabletlandscape {
+  .header__logo {
+    a {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+.header__navigation {
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  background-color: $white;
+  color: $black;
+  width: 100%;
+  margin: 0 -1rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+.header__mobile-check:checked ~ .header__navigation {
+  opacity: 1;
+  pointer-events: all;
+  transform: none;
 }
 
 .header__navigation > * {
   height: 100%;
 }
 
+@include tabletlandscape {
+  .header__navigation {
+    transform: none;
+    opacity: 1;
+    pointer-events: all;
+    background-color: transparent;
+    position: static;
+  }
+}
+
 .header__cta {
   display: flex;
   align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
+  top: min(calc(100vh - 60px - 48px - 3px), calc(800px - 60px - 48px - 3px));
+  background-color: $secondary;
+  width: 100%;
+  height: 64px;
+  padding: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+.header__mobile-check:checked ~ .header__cta {
+  opacity: 1;
+  pointer-events: all;
+  transform: none;
 }
 
 .header__cta-button a {
   display: block;
-  border: 1px solid #FFF;
+  width: max-content;
+  border: 1px solid $white;
+  color: $white;
   font-weight: bold;
   border-radius: 200px;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   transition: background-color 200ms ease-in-out;
   background-color: transparent;
+}
+
+@include tabletlandscape {
+  .header__cta {
+    opacity: 1;
+    pointer-events: all;
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
+  .header__cta-button a {
+    padding: 1rem 2rem;
+  }
 }
 
 .header__cta-button a::after {
@@ -96,7 +185,73 @@ div[data-global-resource-path$="/header.html"] {
 }
 
 .header__cta-button a:hover {
-  color: #FFF;
+  color: $white;
   font-weight: bold;
   background-color: rgba(255,255,255,0.1);
+}
+
+.header__mobile-check {
+  display: none;
+  order: 999;
+}
+
+.header__mobile-toggle {
+  display: flex;
+  align-self: center;
+  padding: 4px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+}
+
+.header__mobile-text {
+  @include hide-text;
+  background-color: $white;
+  position: relative;
+  width: 32px;
+  height: 2px;
+  align-self: center;
+  overflow: visible;
+  display: block;
+  opacity: 1;
+  transition: background-color 200ms ease-in-out;
+}
+
+.header__mobile-text::before,
+.header__mobile-text::after {
+  position: absolute;
+  content: ' ';
+  top: -10px;
+  left: 0;
+  display: block;
+  background-color: $white;
+  width: 100%;
+  height: 2px;
+  transition: transform 200ms ease-in-out;
+  transform-origin: left 50%;
+}
+
+.header__mobile-text::after {
+  bottom: -10px;
+  top: auto;
+}
+
+.header__mobile-check:checked ~ .header__mobile-toggle {
+  .header__mobile-text {
+    background-color: transparent;
+  }
+
+  .header__mobile-text::before {
+    transform: translateY(-1.5px) translateX(4.5px) rotate(45deg);
+  }
+
+  .header__mobile-text::after {
+    transform: translateY(1.5px) translateX(4.5px) rotate(-45deg);
+  }
+}
+
+@include tabletlandscape {
+  .header__mobile-toggle {
+    display: none;
+  }
 }

@@ -1,7 +1,7 @@
 {
   "global" : false,
   "host_template_types" : [ "PAGE", "BLOG_POST" ],
-  "module_id" : 98158547231,
+  "module_id" : 98199757666,
   "label" : "Testimonials",
-  "is_available_for_new_content" : false
+  "is_available_for_new_content" : true
 }

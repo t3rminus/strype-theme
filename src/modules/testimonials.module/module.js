@@ -19,12 +19,21 @@ document.addEventListener('DOMContentLoaded',function(){
     $nav.slick({
       arrows: false,
       dots: false,
-      centerMode: true,
       infinite: true,
       focusOnSelect: true,
+      asNavFor: '#' + id + ' .testimonials__content',
+      slidesToShow: 1,
       centerPadding: '0',
-      slidesToShow: 5,
-      asNavFor: '#' + id + ' .testimonials__content'
+      mobileFirst: true,
+      centerMode: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 5
+          }
+        }
+      ]
     });
     $content.slick({ 
       arrows: false,

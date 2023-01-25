@@ -1,0 +1,57 @@
+$circle-size: 52px;
+.strype-button {
+  padding: $circle-size 0 $circle-size $circle-size;
+}
+
+.strype-button__link {
+  display: inline-block;
+  z-index: 0;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  padding-right: 32px;
+  color: inherit;
+}
+
+.strype-button__link:hover {
+  font-weight: bold;
+  color: inherit;
+}
+
+.strype-button__link::before {
+  content: '\200B';
+  display: block;
+  position: absolute;
+  width: ($circle-size - 10) * 2;
+  height: ($circle-size - 10) * 2;
+  top: -($circle-size - 10);
+  top: calc(#{-($circle-size - 10)} + 0.6rem);
+  left: -($circle-size - 10);
+  background-color: $primary;
+  border-radius: 50%;
+  z-index: -1;
+  outline: 10px solid unquote('rgba(' + $primary-rgb + ', 0.6)');
+  transition: all 200ms ease-in-out;
+}
+
+.strype-button__link:hover::before,
+.strype-button__link:focus::before {
+  outline: 16px solid unquote('rgba(' + $primary-light-rgb + ', 0.6)');
+  background-color: $primary-light;
+}
+
+.strype-button__link:active::before {
+  outline: 10px solid unquote('rgba(' + $primary-rgb + ', 0.6)');
+  background-color: $primary;
+}
+
+.strype-button__arrow {
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  top: 0;
+  top: calc(1.2rem - 17px);
+  right: 8px;
+}

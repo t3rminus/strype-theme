@@ -2,7 +2,7 @@
 
 // 1. Sizing
 // ---------
-$container-width: 1245px;
+$container-width: 1240px;
 
 $padding: 30px;
 $radius: 0px;
@@ -20,6 +20,10 @@ $white: #FFF;
 $black: #141414;
 $primary: string.unquote("{{ theme.global_colors.primary.color }}");
 $secondary: string.unquote("{{ theme.global_colors.secondary.color }}");
+$primary-rgb: string.unquote("{{ theme.global_colors.primary.color | convert_rgb }}");
+$secondary-rgb: string.unquote("{{ theme.global_colors.secondary.color | convert_rgb }}");
+$primary-light: string.unquote("{{ color_variant(theme.global_colors.primary.color, 20) }}");
+$primary-light-rgb: string.unquote("{{ color_variant(theme.global_colors.primary.color, 20) | convert_rgb }}");
 
 // 4. Typography
 // -------------

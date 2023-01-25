@@ -1,66 +1,112 @@
 .strype-menu {
-  height: 100%;
+  height: min(calc(100vh - 60px - 48px - 64px), calc(800px - 60px - 48px - 64px));
   padding: 0 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
+@media (min-width: 1024px) {
+  .strype-menu {
+    height: 100%;
+    padding: 0 1rem;
+    overflow: visible;
+  }
+}
+
 .strype-menu ul {
   list-style: none;
 }
 
 .strype-menu__items {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0.6rem 0;
 }
 
 .strype-menu__item > a, .strype-menu__item > span {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-items: center;
-  padding: 0 1rem;
-  position: relative;
-  transition: color 200ms ease-in-out;
-  cursor: pointer;
-}
-
-.strype-menu__item:hover > a, .strype-menu__item:hover > span {
-  color: inherit;
-}
-
-.strype-menu__item > a::before, .strype-menu__item > span::before {
-  content: '\200B';
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 0;
-  transition: height 200ms ease-in-out;
-}
-
-.strype-menu__item:hover > a::before, .strype-menu__item:hover > span::before {
-  height: 4px;
+  font-weight: bold;
+  padding: 0.3rem 0;
+  display: block;
 }
 
 .strype-menu__item.has-children > a::after, .strype-menu__item.has-children > span::after {
-  content: '\f078';
-  margin-left: 0.3rem;
-  font: var(--fa-font-solid);
-  font-size: 12px;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .strype-menu__items {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .strype-menu__item > a, .strype-menu__item > span {
+    font-weight: normal;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+    transition: color 200ms ease-in-out;
+    cursor: pointer;
+  }
+
+  .strype-menu__item:hover > a, .strype-menu__item:hover > span {
+    color: inherit;
+  }
+
+  .strype-menu__item > a::before, .strype-menu__item > span::before {
+    content: '\200B';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    transition: height 200ms ease-in-out;
+  }
+
+  .strype-menu__item:hover > a::before, .strype-menu__item:hover > span::before {
+    height: 4px;
+  }
+
+  .strype-menu__item.has-children > a::after, .strype-menu__item.has-children > span::after {
+    display: inline-block;
+    content: '\f078';
+    margin-left: 0.3rem;
+    font: var(--fa-font-solid);
+    font-size: 12px;
+  }
 }
 
 .strype-menu__sub {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  background-color: white;
-  position: absolute;
-  left: 0;
-  width: 100%;
   transition: all 200ms ease-in-out;
+  margin: 0 0 1rem 0;
+}
+
+.strype-menu__sub > .content-wrapper {
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .strype-menu__sub {
+    margin: 0 0 0 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    background-color: white;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition: all 200ms ease-in-out;
+  }
+
+  .strype-menu__sub > .content-wrapper {
+    padding: 0 1rem;
+  }
 }
 
 .strype-menu__item.has-children:hover .strype-menu__sub {
@@ -75,16 +121,26 @@
 }
 
 .strype-menu__columns {
-  padding: 3rem 0;
-  display: flex;
-  align-items: stretch;
-  margin: 0 -1.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 .strype-menu__columns > li {
-  flex: 1 1 auto;
-  padding: 0 1.5rem;
-  border-right: 1px solid #D3D3D3;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .strype-menu__columns {
+    padding: 3rem 0;
+    display: flex;
+    align-items: stretch;
+    margin: 0 -1.5rem;
+  }
+  .strype-menu__columns > li {
+    flex: 1 1 100%;
+    padding: 0 1.5rem;
+    border-right: 1px solid #D3D3D3;
+  }
 }
 
 .strype-menu__columns > li:last-child {
@@ -94,21 +150,49 @@
 .strype-menu__col-header {
   display: flex;
   align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: inherit;
-  margin: 0 0 1rem 0;
+  margin: 0;
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
 }
-
 .strype-menu__col-header img {
   flex: 0 0 auto;
-  max-width: 32px;
-  max-height: 32px;
-  margin-right: 0.5rem;
+  max-width: 16px;
+  max-height: 16px;
+  margin-right: 4px;
 }
 
 .strype-menu__col-links {
-  margin: 0;
+  margin-left: 20px;
   padding: 0;
-  line-height: 2rem;
+}
+
+.strype-menu__col-links a {
+  font-size: 0.8rem;
+  padding: 0.2rem 0;
+}
+
+@media (min-width: 1024px) {
+  .strype-menu__col-header {
+    margin: 0 0 1rem 0;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: inherit;
+  }
+
+  .strype-menu__col-header img {
+    max-width: 32px;
+    max-height: 32px;
+    margin-right: 0.5rem;
+  }
+
+  .strype-menu__col-links {
+    margin: 0;
+    padding: 0;
+    line-height: 2rem;
+  }
+
+  .strype-menu__col-links a {
+    font-size: inherit;
+    padding: 0;
+  }
 }

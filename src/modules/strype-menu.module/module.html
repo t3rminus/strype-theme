@@ -1,16 +1,17 @@
 {% require_css %}
   <style>
-  .strype-menu__item:hover > a, .strype-menu__item:hover > span {
+  .strype-menu__item > a:hover, .strype-menu__item > span:hover {
     color: {{ theme.global_colors.primary.color }};
-  }
-  .strype-menu__item:hover .strype-menu__chevron {
-    fill: {{ theme.global_colors.primary.color }};
   }
   .strype-menu__item > a::before, .strype-menu__item > span::before {
     background-color: {{ theme.global_colors.primary.color }};
   }
   .strype-menu__col-header, .strype-menu__col-header * {
     color: {{ theme.global_colors.secondary.color }};
+  }
+  .strype-menu__col-links a:hover {
+    color: {{ theme.global_colors.primary.color }} !important;
+    text-decoration: underline !important;
   }
   </style>
 {% end_require_css %}

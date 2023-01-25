@@ -1,7 +1,7 @@
 {
   "global" : false,
   "host_template_types" : [ "PAGE", "BLOG_POST" ],
-  "module_id" : 97887976753,
+  "module_id" : 98199532877,
   "label" : "Simple Menu",
   "is_available_for_new_content" : true
 }

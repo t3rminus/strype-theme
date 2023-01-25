@@ -5,6 +5,12 @@
   "label" : "Top Level Links",
   "required" : false,
   "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "72e8a071-f254-97a5-b7c3-45dacfb6a246",
+    "default" : null
+  },
   "children" : [ {
     "id" : "72e8a071-f254-97a5-b7c3-45dacfb6a246",
     "name" : "link_text",
@@ -42,6 +48,12 @@
     "label" : "Columns",
     "required" : false,
     "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "3c1e48b2-0e86-62b6-cd65-bedba316cb74",
+      "default" : null
+    },
     "children" : [ {
       "id" : "4793bdfd-82ea-2873-67d1-33ff2acb8b5d",
       "name" : "column_icon",
@@ -80,7 +92,7 @@
       "occurrence" : {
         "min" : null,
         "max" : null,
-        "sorting_label_field" : null,
+        "sorting_label_field" : "3e22d601-9ec8-509a-14a9-5b04bd69bc76",
         "default" : null
       },
       "children" : [ {
