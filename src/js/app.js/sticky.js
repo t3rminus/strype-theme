@@ -1,8 +1,8 @@
 (function() {
-  document.addEventListener('init', () => {
-    const el = document.querySelector('.header').parentElement;
-    const observer = new IntersectionObserver(
-      ([e]) => e.target.classList.toggle('is-stuck', e.intersectionRatio < 1),
+  document.addEventListener('init', function() {
+    var el = document.querySelector('.header').parentElement;
+    var observer = new IntersectionObserver(
+      function(e) { e[0].target.classList.toggle('is-stuck', e[0].intersectionRatio < 1) },
       { threshold: [1] }
     );
 

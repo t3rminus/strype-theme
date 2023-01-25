@@ -4,6 +4,9 @@ module.exports = {
     browser: true,
     node: true,
   },
+  "ignorePatterns": [
+    "**/*.min.js"
+  ],
   rules: {
     'accessor-pairs': 'off',
     'array-bracket-newline': 'off',

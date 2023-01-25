@@ -1,3 +1,4 @@
+/* global $ */
 document.addEventListener('DOMContentLoaded',function(){
   $('.testimonials').each(function(){
     var id = $(this).closest('.hs_cos_wrapper_type_module').attr('id');
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded',function(){
       $content.slick('slickPrev');
     });
 
-    $nav.on('init reInit', function(e) {
+    $nav.on('init reInit', function() {
       $nav.toggleClass('slick-few', $('.slick-slide:not(.slick-cloned)', this).length <= 5);
     });
 
