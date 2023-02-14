@@ -1,7 +1,7 @@
 {
   "global" : false,
   "host_template_types" : [ "PAGE", "BLOG_POST" ],
-  "module_id" : 98196265254,
-  "label" : "Bottom Highlight",
+  "module_id" : 101715907500,
+  "label" : "Two-column List",
   "is_available_for_new_content" : true
 }

@@ -1,0 +1,88 @@
+[ {
+  "id" : "8250103b-f54d-fe32-a3fb-898d203b87af",
+  "name" : "left_items",
+  "display_width" : null,
+  "label" : "Left Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "be6a6e36-303b-1c06-641f-7273b8972cc6",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "36ec26b7-462c-a562-e007-1b021b2d6031",
+    "name" : "item_content",
+    "display_width" : null,
+    "label" : "Item",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "5be5c5f2-9701-72b5-684a-f46712d9e3dd",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "e260719c-e996-8250-8e6a-56cde4f0734d",
+    "name" : "text_color",
+    "display_width" : null,
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : null,
+      "opacity" : null
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_color" : {
+      "color" : null,
+      "opacity" : null
+    }
+  }
+}, {
+  "id" : "8914b8cb-9511-31b2-0944-eecb43425aa3",
+  "name" : "right_items",
+  "display_width" : null,
+  "label" : "Right Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "be6a6e36-303b-1c06-641f-7273b8972cc6",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "590ff6f1-3947-481f-6c38-5658cca2a68a",
+    "name" : "item_content",
+    "display_width" : null,
+    "label" : "Item",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+} ]

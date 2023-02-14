@@ -1,0 +1,55 @@
+.benefits-table__table {
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.benefits-table__table th,
+.benefits-table__table td {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #D1D1D1;
+  padding: 1rem 3rem;
+  text-align: left;
+  vertical-align: top;
+  color: #000;
+}
+
+.benefits-table__table th {
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.benefits-table__benefit-type {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.benefits-table__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.benefits-table__list-item {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.benefits-table__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.benefits-table__list-item::before {
+  content: '\200B';
+  display: block;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 8px;
+  left: -28px;
+}

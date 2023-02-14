@@ -1,18 +1,25 @@
 .bottom-highlight {
   position: relative;
-  z-index: 10;
-  max-width: 1200px;
+  z-index: 100;
   margin: 0 auto;
-  margin-bottom: -80px;
+}
+
+.hs-inline-edit .bottom-highlight {
+  min-height: 40px;
 }
 
 .bottom-highlight__content {
-  padding: 64px 64px 51px 64px;
+  position: absolute;
+  width: 100%;
+  padding: 52px 64px;
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: contain;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 540 241' fill='%23215E8F' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon fill-rule='nonzero' points='540 0 540 241 0 241 210 0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1227 241' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon fill='%23215E8F' fill-rule='nonzero' points='1227 0 1227 241 687 241 897 0'%3E%3C/polygon%3E%3C/svg%3E");
   display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+  z-index: 1000;
 }
 
 .bottom-highlight__content-text {
@@ -28,4 +35,8 @@
   flex: 0 0 auto;
   margin-left: 3rem;
   color: #FFF;
+}
+
+.bottom-highlight__content-link .stripe-button {
+  margin: -52px 0;
 }

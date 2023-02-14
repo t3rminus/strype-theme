@@ -1,0 +1,86 @@
+[ {
+  "id" : "7d5d0dca-be11-62c4-5e8b-ba5066dc9f9d",
+  "name" : "column_1_heading",
+  "display_width" : null,
+  "label" : "Column 1 Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "99ae2502-aee3-07b9-31c7-11f606f19fdb",
+  "name" : "column_2_heading",
+  "display_width" : null,
+  "label" : "Column 2 Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "d3f53aa5-7fc5-3a66-906d-97c66abc71b5",
+  "name" : "rows",
+  "display_width" : null,
+  "label" : "Rows",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "b5828675-6f81-2fd6-5756-9c9a682d6db4",
+    "name" : "benefit_type",
+    "display_width" : null,
+    "label" : "Benefit Type",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "536105f9-e7df-fe98-8dda-2252c716a56e",
+    "name" : "column_1_items",
+    "display_width" : null,
+    "label" : "Column 1 Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "610b7684-7bf0-a741-f83e-c06679624515",
+    "name" : "column_2_items",
+    "display_width" : null,
+    "label" : "Column 2 Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+} ]

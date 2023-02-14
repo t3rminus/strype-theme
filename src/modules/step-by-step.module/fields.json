@@ -1,0 +1,35 @@
+[ {
+  "id" : "8250103b-f54d-fe32-a3fb-898d203b87af",
+  "name" : "items",
+  "display_width" : null,
+  "label" : "List Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "be6a6e36-303b-1c06-641f-7273b8972cc6",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "be6a6e36-303b-1c06-641f-7273b8972cc6",
+    "name" : "item_content",
+    "display_width" : null,
+    "label" : "Item Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "79e8a174-8b84-f776-2fce-1325e44de708",
+  "name" : "after_content",
+  "display_width" : null,
+  "label" : "After Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+} ]

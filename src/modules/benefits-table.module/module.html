@@ -1,0 +1,54 @@
+{% require_css %}
+  <style>
+    {% scope_css %}
+    .benefits-table__table th,
+    .benefits-table__list-item::before {
+      background-color: {{ theme.global_colors.secondary.color }};
+    }
+    .benefits-table__benefit-type {
+      color: {{ theme.global_colors.secondary.color }};
+    }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="benefits-table">
+  <table class="benefits-table__table" cellpadding="0" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Benefit Type</th>
+        <th>{{ module.column_1_heading }}</th>
+        <th>{{ module.column_2_heading }}</th>
+      </tr>
+    </thead>
+    {% for row in module.rows %}
+    <tr>
+      <td class="benefits-table__benefit-type">{{ row.benefit_type }}</td>
+      {% if row.column_2_items|length > 0 %}
+      <td>
+        <ul class="benefits-table__list">
+        {% for item in row.column_1_items %}
+        <li class="benefits-table__list-item">{{ item }}</li>
+        {% endfor %}
+        </ul>
+      </td>
+      <td>
+        <ul class="benefits-table__list">
+        {% for item in row.column_2_items %}
+        <li class="benefits-table__list-item">{{ item }}</li>
+        {% endfor %}
+        </ul>
+      </td>
+      {% else %}
+      <td colspan="2">
+        <ul class="benefits-table__list">
+        {% for item in row.column_1_items %}
+        <li class="benefits-table__list-item">{{ item }}</li>
+        {% endfor %}
+        </ul>
+      </td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </table>
+</div>

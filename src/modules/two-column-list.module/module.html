@@ -1,0 +1,40 @@
+<!-- module html  -->
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .two-col-list * {
+        color: {{ module.style.text_color.css }};
+      }
+      .two-col-list__list-item::before {
+        background-color: {{ module.style.text_color.css }};
+      }
+      .two-col-list > * {
+        border-left-color: {{ module.style.text_color.css }};
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+<div class="two-col-list">
+  <div class="two-col-list__left">
+    <ul class="two-col-list__list">
+      {% for item in module.left_items %}
+        <li class="two-col-list__list-item">
+          <div class="two-col-list__item-content">
+            {{ item.item_content }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="two-col-list__right">
+    <ul class="two-col-list__list">
+      {% for item in module.left_items %}
+        <li class="two-col-list__list-item">
+          <div class="two-col-list__item-content">
+            {{ item.item_content }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
