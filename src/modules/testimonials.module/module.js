@@ -42,4 +42,4 @@ document.addEventListener('DOMContentLoaded',function(){
       asNavFor: '#' + id + ' .testimonials__nav'
     });
   });
-})
+});

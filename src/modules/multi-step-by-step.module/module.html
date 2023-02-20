@@ -1,0 +1,43 @@
+<!-- module html  -->
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .step-by-step__content {
+        border-color: {{ theme.global_colors.secondary.color }};
+      }
+      .step-by-step__list-item::before {
+        background-color: {{ theme.global_colors.secondary.color }};
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="step-by-step">
+  <div class="step-by-step__content">
+    {% for list in module.lists %}
+      <ul class="step-by-step__list">
+        {% if list.before_content is truthy %}
+        <li class="step-by-step__list-item step-by-step--content">
+          <div class="step-by-step__item-content">
+            {{ list.before_content }}
+          </div>
+        </li>
+        {% endif %}
+        {% for item in list.items %}
+          <li class="step-by-step__list-item">
+            <div class="step-by-step__item-content">
+              {{ item.item_content }}
+            </div>
+          </li>
+        {% endfor %}
+        {% if list.after_content is truthy %}
+        <li class="step-by-step__list-item step-by-step--content">
+          <div class="step-by-step__item-content">
+            {{ list.after_content }}
+          </div>
+        </li>
+        {% endif %}
+      </ul>
+    {% endfor %}
+  </div>
+</div>

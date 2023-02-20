@@ -1,0 +1,38 @@
+[ {
+  "id" : "b8ecbe4a-af9c-bc71-6191-254bdf313a8e",
+  "name" : "faqs",
+  "display_width" : null,
+  "label" : "FAQs",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "d3df0df8-e3a4-3c9b-c4ef-6aef6491c510",
+    "name" : "question",
+    "display_width" : null,
+    "label" : "Question",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "ce75b280-d28a-53d2-048c-7ee690ecaabd",
+    "name" : "answer",
+    "display_width" : null,
+    "label" : "Answer",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+} ]

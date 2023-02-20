@@ -1,0 +1,25 @@
+<!-- module html  -->
+{% require_css %}
+  <style>
+    {% scope_css %}
+    .faqs__question::after {
+        background-color: {{ theme.global_colors.primary.color }};
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="faqs">
+  {% for faq in module.faqs %}
+    <div class="faqs__item">
+      <div class="faqs__question js-faq-toggle">
+        {{ faq.question }}
+      </div>
+      <div class="faqs__answer">
+        <div class="faqs__answer-content">
+          {{ faq.answer }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

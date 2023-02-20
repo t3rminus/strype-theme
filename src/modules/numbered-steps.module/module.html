@@ -1,0 +1,25 @@
+<!-- module html  -->
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .numbered_list__content {
+        border-color: {{ theme.global_colors.secondary.color }};
+      }
+      .numbered_list__list-item::before {
+        background-color: {{ theme.global_colors.secondary.color }};
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="numbered_list">
+  <div class="numbered_list__content">
+    <ol class="numbered_list__list">
+      {% for item in module.list_items %}
+      <li class="numbered_list__list-item">
+        {{ item }}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</div>

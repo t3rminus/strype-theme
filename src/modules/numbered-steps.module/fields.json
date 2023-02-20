@@ -1,0 +1,18 @@
+[ {
+  "id" : "7c8d0a0b-ad89-c390-13f3-9ac620baac15",
+  "name" : "list_items",
+  "display_width" : null,
+  "label" : "List Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]
