@@ -1,0 +1,102 @@
+
+
+.process-steps__list {
+  list-style: none;
+  counter-reset: item;
+}
+
+.process-steps__list-item {
+  counter-increment: item;
+  margin: 0;
+  display: block;
+  align-items: center;
+  margin: 0 0 4rem 0;
+  position: relative;
+}
+
+.process-steps__list-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.process-steps__list-item::before {
+  content: none
+}
+
+.process-steps__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.process-steps__image {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+}
+
+.process-steps__image::after {
+  content: '\200B';
+  display: block;
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg width='349px' height='336px' viewBox='0 0 349 336' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23215E8F' fill-rule='nonzero'%3E%3Cpolygon points='1.42108547e-14 133.0425 1.42108547e-14 246.9145 174.9394 335.4815 347.5764 245.7645 347.5764 156.0475 1.42108547e-14 1.9175 1.42108547e-14 80.1325 269.3144 208.9575 173.7884 256.1165 63.3004 206.6565 63.3004 157.1975'%3E%3C/polygon%3E%3Cpolygon points='145.0154 -7.10542736e-15 347.5764 -7.10542736e-15 347.5764 90.1005'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
+  width: 188px;
+  height: 181px;
+  background-size: contain;
+  top: 100%;
+  left: 0;
+  margin-top: -110px;
+  margin-left: -94px;
+  z-index: 1;
+}
+
+.process-steps__list-item:nth-child(even) .process-steps__image::after {
+  left: 100%;
+}
+
+.process-steps__image img {
+  display: block;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .process-steps__list-item {
+    display: flex;
+    margin: 0 -3rem 8rem -3rem;
+  }
+
+  .process-steps__image, .process-steps__content {
+    margin: 0 3rem;
+  }
+
+  .process-steps__list-item::after {
+    background: transparent no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Csymbol viewBox='0 0 13 8' id='arrowhead'%3E%3Cpolygon fill='%23215E8F' fill-rule='nonzero' points='1.7509775 0.353905 6.2869775 4.889119 11.3253065 0.35586 12.6632365 1.842448 6.2147405 7.646095 0.3367635 1.768119'%3E%3C/polygon%3E%3C/symbol%3E%3Cg stroke-width='1' fill='none' fill-rule='evenodd' stroke-dasharray='4' stroke-linecap='square' stroke='%23215E8F'%3E%3Cline x1='20%25' y1='3.5%25' x2='20%25' y2='50%25'%3E%3C/line%3E%3Cline x1='20%25' y1='50%25' x2='80%25' y2='50%25'%3E%3C/line%3E%3Cline x1='80%25' y1='50%25' x2='80%25' y2='78.5%25'%3E%3C/line%3E%3C/g%3E%3Cuse href='%23arrowhead' x='80%25' y='78.5%25' width='13' height='8' transform='translate(-6.5 0)' /%3E%3C/svg%3E");
+    background-size: 100%;
+    content: '\200B';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    width: 90%;
+    height: 135px;
+  }
+
+  .process-steps__list-item:nth-child(even)::after {
+    transform: scaleX(-1);
+  }
+
+  .process-steps__list-item:last-child::after {
+    content: none;
+  }
+}
+
+.process-steps__heading {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.process-steps__heading::before {
+  content: counter(item) ". ";
+}

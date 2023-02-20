@@ -22,6 +22,11 @@
   padding: 0.6rem 0;
 }
 
+.strype-menu__item {
+  margin: 0;
+  position: static;
+}
+
 .strype-menu__item > a, .strype-menu__item > span {
   font-weight: bold;
   padding: 0.3rem 0;
@@ -29,6 +34,10 @@
 }
 
 .strype-menu__item.has-children > a::after, .strype-menu__item.has-children > span::after {
+  display: none;
+}
+
+.strype-menu__item::before {
   display: none;
 }
 
@@ -172,6 +181,10 @@
 .strype-menu__col-links {
   margin-left: 20px;
   padding: 0;
+}
+
+.strype-menu__col-links > li {
+  margin: 0;
 }
 
 .strype-menu__col-links a {

@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 103175942793,
+  "label" : "Outline Callout",
+  "is_available_for_new_content" : true
+}

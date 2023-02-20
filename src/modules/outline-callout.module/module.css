@@ -1,0 +1,30 @@
+.outline-callout {
+  padding: 39px 50px;
+  width: 75%;
+  outline: 1.5rem solid #FFF;
+  min-height: 120px;
+}
+
+.outline-callout--left {
+  margin-right: auto;
+}
+
+.outline-callout--right {
+  margin-left: auto;
+}
+
+.outline-callout * {
+  color: #FFF;
+}
+
+.outline-callout__heading {
+  font-size: 26px;
+}
+
+.outline-callout__content li::before {
+  background-color: #FFF !important;
+}
+
+.outline-callout__content *:last-child {
+  margin-bottom: 0;
+}

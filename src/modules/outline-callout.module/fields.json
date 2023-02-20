@@ -1,0 +1,60 @@
+[ {
+  "id" : "1725460f-7926-3e8c-6f48-1b64938f0232",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "aa090fcd-56c7-d767-b0d2-79acd6ba57c5",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+}, {
+  "id" : "13e09695-b8f6-c82a-26c6-bee005b2a5c6",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "51e0fe90-ad84-acce-0286-d6ee1fddc0d9",
+    "name" : "alignment",
+    "display_width" : null,
+    "label" : "Alignment",
+    "required" : false,
+    "locked" : false,
+    "display" : "radio",
+    "choices" : [ [ "left", "Left" ], [ "right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice"
+  }, {
+    "id" : "7cc267e9-cd98-7bfc-29cd-289bb9273ece",
+    "name" : "top_overlap",
+    "display_width" : null,
+    "label" : "Top Overlap",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "min" : -1000,
+    "max" : 1000,
+    "step" : 1,
+    "type" : "number",
+    "default" : 0
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "top_overlap" : 0
+  }
+} ]

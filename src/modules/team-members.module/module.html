@@ -1,0 +1,27 @@
+{# Module styles #}
+
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .team-members__link {
+        border-color: transparent transparent {{ theme.global_colors.primary.color }} transparent;
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="team-members">
+  {% for person in module.people %}
+    <div class="team-members__person">
+      <img src="{{ person.image.src }}" alt="{{ person.full_name }}" class="team-members__photo" />
+      <h4 class="team-members__name">{{ person.full_name }}</h4>
+      <h5 class="team-members__job-title">{{ person.job_title }}</h5>
+      <div class="team-members__description">
+        {{ person.description }}
+      </div>
+      {% if person.link.url.href is truthy %}
+        <a href="{{ person.link.url.href }}" class="team-members__link">{{ person.full_name }}</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

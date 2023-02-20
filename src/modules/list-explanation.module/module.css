@@ -75,6 +75,10 @@
   z-index: 1;
 }
 
+.list-explanation__list-item::before {
+  content: none;
+}
+
 .list-explanation__list-item::after {
   content: '\200B';
   display: block;

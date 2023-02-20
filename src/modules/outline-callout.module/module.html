@@ -1,0 +1,17 @@
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .outline-callout {
+        background-color: {{ theme.global_colors.primary.color }};
+        margin-top: {{ module.style.top_overlap }}px;
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="outline-callout outline-callout--{{ module.style.alignment }}">
+  <h3 class="outline-callout__heading">{{ module.heading }}</h3>
+  <div class="outline-callout__content">
+    {{ module.content }}
+  </div>
+</div>

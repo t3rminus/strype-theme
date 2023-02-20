@@ -1,0 +1,26 @@
+{# Module styles #}
+
+{% require_css %}
+  <style>
+    {% scope_css %}
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="process-steps">
+  <ul class="process-steps__list">
+    {% for step in module.steps %}
+    <li class="process-steps__list-item">
+      <div class="process-steps__image">
+        <img src="{{ step.image.src }}" alt="{{ step.heading }}" />
+      </div>
+      <div class="process-steps__content">
+        <h2 class="process-steps__heading">{{ step.heading }}</h2>
+        <div class="process-steps__content-body">
+          {{ step.content }}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
