@@ -15,6 +15,13 @@
 <div class="step-by-step">
   <div class="step-by-step__content">
     <ul class="step-by-step__list">
+      {% if module.before_content is truthy %}
+      <li class="step-by-step__list-item step-by-step--content">
+        <div class="step-by-step__item-content">
+          {{ module.before_content }}
+        </div>
+      </li>
+      {% endif %}
       {% for item in module.items %}
         <li class="step-by-step__list-item">
           <div class="step-by-step__item-content">
@@ -23,7 +30,7 @@
         </li>
       {% endfor %}
       {% if module.after_content is truthy %}
-      <li class="step-by-step__list-item step-by-step--after">
+      <li class="step-by-step__list-item step-by-step--content">
         <div class="step-by-step__item-content">
           {{ module.after_content }}
         </div>

@@ -37,11 +37,11 @@
   left: -28px;
 }
 
-.step-by-step--after.step-by-step__list-item {
+.step-by-step--content.step-by-step__list-item {
   margin-left: 0;
 }
 
-.step-by-step--after.step-by-step__list-item::before {
+.step-by-step--content.step-by-step__list-item::before {
   display:none;
 }
 

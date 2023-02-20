@@ -1,4 +1,12 @@
 [ {
+  "id" : "ef4c8d67-b175-e340-66c4-fa414eaec21f",
+  "name" : "before_content",
+  "display_width" : null,
+  "label" : "Before Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+}, {
   "id" : "8250103b-f54d-fe32-a3fb-898d203b87af",
   "name" : "items",
   "display_width" : null,
