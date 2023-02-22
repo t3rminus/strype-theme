@@ -1,4 +1,16 @@
 [ {
+  "id" : "56ae6cd3-4b6b-452f-8dfc-33450b03dff7",
+  "name" : "benefit_type_heading",
+  "display_width" : null,
+  "label" : "Benefit Type Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default": "Type of Benefit"
+},{
   "id" : "7d5d0dca-be11-62c4-5e8b-ba5066dc9f9d",
   "name" : "column_1_heading",
   "display_width" : null,
@@ -60,7 +72,7 @@
     "validation_regex" : "",
     "allow_new_line" : false,
     "show_emoji_picker" : false,
-    "type" : "text"
+    "type" : "richtext"
   }, {
     "id" : "610b7684-7bf0-a741-f83e-c06679624515",
     "name" : "column_2_items",
@@ -77,7 +89,7 @@
     "validation_regex" : "",
     "allow_new_line" : false,
     "show_emoji_picker" : false,
-    "type" : "text"
+    "type" : "richtext"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,

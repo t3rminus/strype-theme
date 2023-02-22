@@ -16,7 +16,7 @@
   <table class="benefits-table__table" cellpadding="0" cellspacing="0">
     <thead>
       <tr>
-        <th>Benefit Type</th>
+        <th>{{ module.benefit_type_heading if module.benefit_type_heading is truthy else "Type of Benefit" }}</th>
         <th>{{ module.column_1_heading }}</th>
         <th>{{ module.column_2_heading }}</th>
       </tr>
