@@ -1,0 +1,29 @@
+<!-- module html  -->
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .contact-form__content {
+        border-color: {{ theme.global_colors.secondary.color }};
+      }
+      .contact-form__list-item::before {
+        background-color: {{ theme.global_colors.secondary.color }};
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="contact-form">
+  <div class="contact-form__content">
+    <h3 class="contact-form__heading">{{ module.heading }}</h3>
+    <div class="contact-form__form">
+      {% form
+        form_to_use="{{ module.form.form_id }}"
+        response_response_type="{{ module.form.response_type }}"
+        response_message="{{ module.form.message }}"
+        response_redirect_id="{{ module.form.redirect_id }}"
+        response_redirect_url="{{ module.form.redirect_url }}"
+        gotowebinar_webinar_key="{{ module.form.gotowebinar_webinar_key }}"
+      %}
+    </div>
+  </div>
+</div>

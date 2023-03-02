@@ -1,89 +1,38 @@
 <!--
   templateType: blog_post
   isAvailableForNewContent: true
-  label: Boilerplate - blog post
-  screenshotPath: ../images/template-previews/blog-post.png
+  label: Blog Post
 -->
-{% set template_css = "../../css/templates/blog.css" %}
 {% extends "./layouts/base.html" %}
 
 {% block body %}
 <div class="body-container body-container--blog-post">
-
-  {# Blog post #}
-
-  <div class="content-wrapper">
-    <article class="blog-post">
-      <h1>{{ content.name }}</h1>
-      <div class="blog-post__meta">
-        <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
-          {{ content.blog_post_author.display_name }}
-        </a>
-        <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
+  <article class="blog-post">
+    <div class="blog-post__header">
+      {% if content.featured_image %}
+        <img class="blog-post__header-back" src="{{ content.featured_image }}" loading="lazy" />
+      {% endif %}
+      <h1 class="blog-post__title">{{ content.name }}</h1>
+      <div class="blog-post__date">
+        <svg viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="blog-post__date-icon">
+          <path d="M4.49471877,2.62628251 L4.49471877,3.32341251 L5.99501503,3.32759251 L5.99501503,2.62631251 C5.99073503,1.67428251 4.49118503,1.68598251 4.49471877,2.62628251 Z M11.997595,2.62628251 L11.997595,3.33171251 L5.99501503,3.33171251 L5.99501503,5.46044251 C5.94563503,6.42623251 4.45540503,6.37613251 4.49472503,5.46044251 L4.49472503,3.33171251 L2.24722503,3.33171251 C1.83294503,3.33327251 1.49842503,3.65156251 1.49999945,4.04267251 L1.49999945,6.87683251 L16.4999995,6.87683251 L16.4999995,4.04267251 C16.501595,3.64940251 16.163495,3.33021251 15.746895,3.33171251 L13.499395,3.33171251 L13.499395,2.62628251 C13.482995,1.67141251 11.983795,1.68892251 11.997595,2.62628251 Z M11.997595,3.33586251 L13.499395,3.33586251 L13.499395,5.46044251 C13.483195,6.40947251 11.984195,6.39257251 11.997595,5.46044251 L11.997595,3.33586251 Z M1.49999231,8.28768251 L1.49999231,15.3710225 C1.49761503,15.7626225 1.83236503,16.0818225 2.24722503,16.0833278 C6.74711503,16.0833278 11.246995,16.0833278 15.746895,16.0833278 C16.164095,16.0848225 16.502395,15.7648225 16.5000077,15.3710225 L16.5000077,8.28768251 L1.49999231,8.28768251 Z M4.4961762,10.0601257 L5.9964662,10.0601257 C6.9957962,10.0522557 7.0053462,11.4683457 5.9964662,11.4778957 L4.4961762,11.4778957 C3.5078062,11.4889757 3.4919562,10.0734157 4.4961762,10.0601257 Z M8.2512962,10.0601257 L9.7515862,10.0601257 C10.7515462,10.0626757 10.7481462,11.4790057 9.7515862,11.4778964 L8.2512962,11.4778964 C7.2444662,11.4684957 7.2538262,10.0523957 8.2512962,10.0601257 Z M11.9990462,10.0601257 L13.5008462,10.0601257 C14.4899462,10.0422657 14.5122462,11.4569857 13.5008462,11.4778957 L11.9990462,11.4778957 C10.9962462,11.4685257 11.0055462,10.0524257 11.9990462,10.0601257 Z M4.4961762,12.8943057 L5.9964662,12.8943057 C6.9918862,12.8787057 7.0092762,14.2940057 5.9964662,14.3107057 L4.4961762,14.3107057 C3.5001762,14.3093057 3.4996062,12.8929057 4.4961762,12.8943057 Z M8.2512962,12.8943057 L9.7515862,12.8943057 C10.7589462,12.9080057 10.7407462,14.3233057 9.7515862,14.3107057 L8.2512962,14.3107057 C7.2667462,14.3364057 7.2314262,12.9241057 8.2512962,12.8943057 Z M11.9990462,12.8943057 L13.5008462,12.8943057 C14.5103462,12.9084057 14.4917462,14.3236057 13.5008462,14.3107057 L11.9990462,14.3107057 C10.9921462,14.2940057 11.0094462,12.8787057 11.9990462,12.8943057 Z" fill="currentColor" fill-rule="nonzero"></path>
+        </svg>
+        <time class="blog-post__timestamp" datetime="{{ content.publish_date }}">
           {{ content.publish_date_localized }}
         </time>
       </div>
-      <div class="blog-post__body">
-        {{ content.post_body }}
-      </div>
-      {% if content.tag_list %}
-        <div class="blog-post__tags">
-          {% icon
-            name="tag",
-            purpose="decorative",
-            style="SOLID"
-          %}
-          {% for tag in content.tag_list %}
-            <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
-          {% endfor %}
+    </div>
+    <div class="content-wrapper">
+      <div class="blog-post__main">
+        <div class="blog-post__body">
+          {{ content.post_body }}
         </div>
-      {% endif %}
-    </article>
-    {% if group.allow_comments %}
-      <div class="blog-comments">
-        {% module "blog_comments"
-          path="@hubspot/blog_comments",
-          label="Blog comments"
-        %}
-      </div>
-    {% endif %}
-  </div>
-
-  {# Recent posts listing #}
-
-  {# This macro is used to format each recent post card and gets passed to the related_blog_posts HubL tag below #}
-
-  {% macro related_posts(post, count, total) %}
-    {% if count == 1 %}
-      <section class="blog-related-posts">
-        <div class="content-wrapper">
-          <h2>Read On</h2>
-          <div class="blog-related-posts__list">
-    {% endif %}
-            <article class="blog-related-posts__post" aria-label="Blog post summary: {{ post.name }}">
-              {% if post.featured_image %}
-                <a class="blog-related-posts__post-image-wrapper" href="{{ post.absolute_url }}" aria-label="{% if post.featured_image_alt_text %} Featured image: {{ post.featured_image_alt_text }} - {% endif %}Read full post: {{ post.name }}">
-                  <img class="blog-related-posts__image" src="{{ post.featured_image }}" loading="lazy" width="352" alt="{{ post.featured_image_alt_text }}">
-                </a>
-              {% endif %}
-              <div class="blog-related-posts__content">
-                <h3 class="blog-related-posts__title">
-                  <a class="blog-related-posts__title-link" href="{{ post.absolute_url }}">{{ post.name }}</a></h3>
-                {{ post.post_summary|truncatehtml(100) }}
-              </div>
-            </article>
-      {% if count == total %}
-          </div>
+        <div class="blog-post__sidebar">
+        {% global_partial path="./partials/blog-sidebar.html" %}
         </div>
-      </section>
-    {% endif %}
-  {% endmacro %}
-
-  {% related_blog_posts
-    limit=3,
-    no_wrapper=True,
-    post_formatter="related_posts"
-  %}
-
+      </div>
+    </div>
+  </article>
 </div>
+  {% global_partial path="./partials/blog-footer.html" %}
 {% endblock body %}

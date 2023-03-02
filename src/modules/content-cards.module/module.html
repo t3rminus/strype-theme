@@ -2,12 +2,20 @@
 {% require_css %}
   <style>
     {% scope_css %}
-    
+    .content-cards__icon {
+      background-color: {{ theme.global_colors.secondary.color }};
+    }
+    .content-cards--inverted .content-cards__card-content {
+      background-color: rgba({{ theme.global_colors.secondary.color | convert_rgb }}, .7);
+    }
+    .content-cards--inverted .content-cards__icon {
+      background-color: #FFF;
+    }
     {% end_scope_css %}
   </style>
 {% end_require_css %}
 
-<div class="content-cards">
+<div class="content-cards {{ 'content-cards--inverted' if module.style.invert_colors }}">
   {% for card in module.cards %}
   <div class="content-cards__card">
     <div class="content-cards__card-content">

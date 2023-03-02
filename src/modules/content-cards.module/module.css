@@ -38,7 +38,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #215E8F;
   border-radius: 50%;
   width: 108px;
   height: 108px;
@@ -48,4 +47,21 @@
   color: #000;
   text-align: center;
   font-size: 1.75rem;
+}
+
+.content-cards--inverted .content-cards__heading {
+  color: #FFF;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.content-cards--inverted .content-cards__card-content {
+  color: #FFF;
+  border: 1px solid #FFF;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.content-cards--inverted .content-cards__icon {
+  background-color: #FFF;
 }

@@ -1,0 +1,20 @@
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .blog-tags__link:hover {
+        background-color: {{ theme.global_colors.secondary.color }};
+        color: #FFF;
+        font-weight: bold;
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+{% set the_tags = blog_tags("default", 5) %}
+<ul class="blog-tags">
+  {% for tag in the_tags %}
+    <li class="blog-tags__tag">
+      <a class="blog-tags__link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag }}</a>
+    </li>
+  {% endfor %}
+</ul>

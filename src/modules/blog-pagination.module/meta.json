@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "../../images/module-icons/blog.svg",
+  "host_template_types" : [ "BLOG_LISTING" ],
+  "module_id" : 10444178520998,
+  "label" : "Blog Pagination",
+  "is_available_for_new_content" : true
+}

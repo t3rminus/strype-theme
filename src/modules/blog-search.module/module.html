@@ -1,0 +1,16 @@
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .blog-search {
+        border-color: {{ theme.global_colors.secondary.color }};
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="blog-search">
+  <form action="/{{ site_settings.content_search_results_page_path }}">
+    <input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="Search" placeholder="Search" />
+    <input type="hidden" name="type" value="BLOG_POST" />
+  </form>
+</div>

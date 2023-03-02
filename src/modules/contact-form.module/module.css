@@ -1,0 +1,40 @@
+.contact-form {
+  display: block;
+}
+
+.contact-form__content {
+  margin-bottom: 2rem;
+}
+
+.contact-form__content {
+  padding: 60px 40px 32px 40px;
+  background-color: #FFF;
+  border-top: 16px solid;
+  height: 100%;
+}
+
+.contact-form__heading {
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 45px;
+  line-height: 52px;
+}
+
+.contact-form__form form {
+  width: 100%;
+  display: block;
+}
+
+.contact-form__form form fieldset {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 24px;
+}
+
+.contact-form__form form fieldset label {
+  color: #000;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  font-weight: bold;
+}

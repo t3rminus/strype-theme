@@ -8,6 +8,12 @@ div[data-global-resource-path$="/header.html"] {
   overflow: visible;
 }
 
+.hs-inline-edit div[data-global-resource-path$="/header.html"] {
+  position: static !important;
+  height: auto;
+  background-color: $secondary;
+}
+
 .header {
   position: relative;
   transition: background-color 200ms ease-in-out;

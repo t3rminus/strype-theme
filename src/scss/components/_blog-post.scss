@@ -1,0 +1,126 @@
+.blog-post {
+  background-color: #EEE;
+}
+
+.blog-post__header {
+  padding: 200px 0 120px 0;
+  position: relative;
+  z-index: 5;
+  background-color: #012441;
+}
+
+.blog-post__header-back {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.blog-post__title {
+  text-transform: uppercase;
+  color: #FFF;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 65px;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 32px auto;
+}
+
+.blog-post__date {
+  color: #FFF;
+  font-size: 19px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.blog-post__date-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: text-top;
+}
+
+.blog-post__main {
+  padding: 64px 0;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 50px;
+}
+
+.blog-post__body {
+  h1, h2, h3, h4, h5, h6, .h1,
+  .h2, .h3, .h4, .h5, .h6 {
+    margin: 60px 0 40px 0;
+    color: #000 !important;
+    text-transform: uppercase !important;
+  }
+
+  p {
+    margin: 0 0 1.5rem 0;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  ul, ol {
+    margin: 0 0 1.5rem 0;
+  }
+
+  blockquote {
+    position: relative;
+    background-color: #FFF;
+    margin: 0 0 40px 0;
+    padding: 32px 32px 32px 96px;
+    border-top: 16px solid $secondary;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: ' ';
+      background: transparent url("data:image/svg+xml,%3Csvg viewBox='0 0 30 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.2 15.5945C0.2 20.7945 3.56 23.7545 7.32 23.7545C10.76 23.7545 13.64 20.8745 13.64 17.4345C13.64 13.9945 11.24 11.6745 8.2 11.6745C7.56 11.6745 6.84 11.7545 6.6 11.9145C7.32 9.03448 10.28 5.67448 12.84 4.31448L8.44 0.794479C3.48 4.23448 0.2 9.59448 0.2 15.5945ZM16.52 15.5945C16.52 20.7945 19.8 23.7545 23.56 23.7545C27.08 23.7545 29.88 20.8745 29.88 17.4345C29.88 13.9945 27.48 11.6745 24.52 11.6745C23.88 11.6745 23.16 11.7545 22.92 11.9145C23.56 9.03448 26.6 5.67448 29.16 4.31448L24.68 0.794479C19.72 4.23448 16.52 9.59448 16.52 15.5945Z' fill='%23215E8F'/%3E%3C/svg%3E") no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      top: 35px;
+      left: 53px;
+      width: 32px;
+      height: 24px;
+    }
+  }
+
+  table {
+    background-color: #FFF;
+    margin: 0 0 40px 0;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+
+    td {
+      padding: 24px 38px !important;
+      color: #000;
+    }
+  }
+
+  div[data-hs-responsive-table] {
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+    margin: 0 0 40px 0;
+
+    table {
+      box-shadow: none;
+      margin: 0;
+    }
+  }
+}
+
+.blog-post__sidebar {
+  .content-wrapper--vertical-spacing, .dnd-section {
+    padding: 0 !important;
+  }
+}

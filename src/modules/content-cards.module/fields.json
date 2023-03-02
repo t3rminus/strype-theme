@@ -1,4 +1,28 @@
 [ {
+  "id" : "0b953cc5-923e-ff86-817c-7dbed75d3a55",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "4bae6e8d-5355-4e27-7d23-69d367aebaa4",
+    "name" : "invert_colors",
+    "display_width" : null,
+    "label" : "Invert Colors",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "invert_colors" : false
+  }
+}, {
   "id" : "a48b4589-fb52-c174-56a5-bfbb14a4505a",
   "name" : "cards",
   "display_width" : null,

@@ -1,0 +1,38 @@
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .blog-pagination__link {
+        background-color: #FFF;
+        border-color: {{ theme.global_colors.primary.color }};
+        color: {{ theme.global_colors.primary.color }};
+      }
+      .blog-pagination__next-link, .blog-pagination__prev-link, .blog-pagination__link--active {
+          background-color: {{ theme.global_colors.primary.color }};
+          border-color: {{ theme.global_colors.primary.color }};
+          color: #FFF;
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="blog-pagination">
+    {% set page_list = [-2, -1, 0, 1, 2] %}
+    {% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+    {% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+    {% elif current_page_num == 2 %}{% set offset = 1 %}
+    {% elif current_page_num == 1 %}{% set offset = 2 %}
+    {% else %}{% set offset = 0 %}{% endif %}
+
+    <a class="blog-pagination__link blog-pagination__prev-link {{ "blog-pagination__link--disabled" if !last_page_num }}" href="{{ blog_page_link(last_page_num) }}">
+    Prev
+    </a>
+    {% for page in page_list %}
+      {% set this_page = current_page_num + page + offset %}
+      {% if this_page > 0 and this_page <= contents.total_page_count %}
+          <a class="blog-pagination__link blog-pagination__number-link {{ "blog-pagination__link--active" if this_page == current_page_num }}" href="{{ blog_page_link(this_page) }}">{{ this_page }}</a>
+      {% endif %}
+    {% endfor %}
+    <a class="blog-pagination__link blog-pagination__next-link {{ "blog-pagination__link--disabled" if !next_page_num }}" href="{{ blog_page_link(current_page_num + 1) }}">
+    Next
+    </a>
+</div>

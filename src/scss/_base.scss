@@ -54,3 +54,51 @@ ul {
     }
   }
 }
+
+form fieldset {
+  width: auto !important;
+  margin-right: -24px !important;
+
+  .input {
+    margin-right: 24px !important;
+  }
+}
+
+form fieldset.form-columns-2 {
+  margin-bottom: 0 !important;
+
+  .hs-form-field {
+    float: none !important;
+    width: auto !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+@include desktop {
+  form fieldset.form-columns-2 {
+    .hs-form-field {
+      width: 50% !important;
+      float: left !important;
+    }
+  }
+}
+
+input[type=text], input[type=password], input[type=date],
+input[type=email], input[type=month], input[type=number],
+input[type=search], input[type=tel], input[type=url],
+input[type=week], input[type=time], textarea, select {
+  &, form & {
+    border-radius: 0 !important;
+    border: 1px solid #B8B8B8 !important;
+    display: block;
+    padding: 16px 24px;
+    background-color: #FFF !important;
+    color: #000 !important;
+    width: 100% !important;
+
+    &::placeholder {
+      color: #AAA;
+      font-size: 1rem;
+    }
+  }
+}
