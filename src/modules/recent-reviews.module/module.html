@@ -1,0 +1,46 @@
+{{ require_js("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js") }}
+{{ require_css("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css") }}
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .recent-reviews__content {
+        border-color: {{ theme.global_colors.secondary.color }};
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="recent-reviews">
+  <div class="recent-reviews__slide">
+    {% for row in hubdb_table_rows("recentreviews", "orderBy=random()") %}
+      <div class="recent-reviews__review" id="review-{{ row.hs_id }}">
+        <div class="recent-reviews__wrap">
+          <div class="recent-reviews__stars">
+          {% for star in range(0, row.stars) %}
+            <span class="recent-reviews__star">⭐</span>
+          {% endfor %}
+          </div>
+          <div class="recent-reviews__content">
+            {{ row.content }}
+          </div>
+          <h4 class="recent-reviews__name">
+            {{ row.name }}
+          </h4>
+          <h6 class="recent-reviews__location">
+            {{ row.location }}
+          </h6>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <button class="recent-reviews__prev js-prev">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 7.2125L11.2937 6L22 16L11.2937 26L10 24.7938L19.4062 16L10 7.2125Z" />
+    </svg>
+  </button>
+  <button class="recent-reviews__next js-next">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 7.2125L11.2937 6L22 16L11.2937 26L10 24.7938L19.4062 16L10 7.2125Z" />
+    </svg>
+  </button>
+</div>

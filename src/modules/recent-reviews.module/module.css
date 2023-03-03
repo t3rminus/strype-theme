@@ -1,0 +1,105 @@
+.recent-reviews {
+  position: relative;
+}
+
+.recent-reviews__slide {
+  margin: 0 22px;
+}
+
+.recent-reviews__review {
+  padding: 18px;
+}
+.recent-reviews__wrap {
+  background-color: #FFF;
+  padding: 32px;
+  border-top: 16px solid;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+
+.recent-reviews__next,
+.recent-reviews__prev {
+  color: #000;
+  border: 0;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  left: 0px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recent-reviews__next {
+  left: auto;
+  right: 0;
+}
+
+.recent-reviews__next svg,
+.recent-reviews__prev svg {
+  display: block;
+  margin: 0 auto;
+  width: 32px;
+  height: 32px;
+}
+
+.recent-reviews__prev svg {
+  transform: scaleX(-100%);
+}
+
+.recent-reviews__stars {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.recent-reviews__star {
+  display: inline-block;
+  font-size: 1px;
+  text-indent: -10px;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  background: no-repeat center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 15.773L16.18 19.5L14.545 12.471L20 7.744L12.809 7.127L10 0.5L7.191 7.127L0 7.744L5.455 12.471L3.82 19.5L10 15.773Z' fill='%23ED940E'/%3E%3C/svg%3E%0A");
+}
+
+.recent-reviews__content,
+.recent-reviews__name,
+.recent-reviews__location {
+  text-align: center;
+}
+
+.recent-reviews__name {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.recent-reviews__location {
+  font-weight: normal;
+  color: #000;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: 1400px) {
+  .recent-reviews__slide {
+    margin: 0 -18px;
+  }
+  .recent-reviews__prev {
+    left: -80px;
+  }
+  .recent-reviews__next {
+    right: -80px;
+  }
+}

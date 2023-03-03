@@ -1,0 +1,66 @@
+[ {
+  "id" : "560927ec-0718-d6e2-d4b3-7f4abba38336",
+  "name" : "address",
+  "display_width" : null,
+  "label" : "Address",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "8ff2c085-e159-737a-c546-cd4d2dce0277",
+  "name" : "phone_number",
+  "display_width" : null,
+  "label" : "Phone Number",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "837ab6be-fe40-3168-efb3-adeb7a72abfc",
+  "name" : "lower_content",
+  "display_width" : null,
+  "label" : "Bottom Content",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Strype Personal Injury Lawyers are committed to serving our clients in {CITY} and the surrounding areas."
+}, {
+  "id" : "1d2a2bdf-a13d-59e0-a0e4-afdc4f695aea",
+  "name" : "contact_link",
+  "display_width" : null,
+  "label" : "Get in Touch Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "a2fb001b-fdf9-f63e-1a0e-5a6b951bfcfe",
+  "name" : "contact_text",
+  "display_width" : null,
+  "label" : "Get In Touch Link Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "We're here to help! Book your free consultation today."
+} ]

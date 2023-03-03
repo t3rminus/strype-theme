@@ -1,0 +1,39 @@
+{% require_css %}
+  <style>
+    {% scope_css %}
+      
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+
+<div class="location-map">
+  <div class="loocation-map__map">
+    <iframe
+      width="590"
+      height="400"
+      style="border:0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBv4fMFq3aRmBPf3SlZVYcqgEXkkRbBnaM
+        &q={{ module.address | urlencode }}">
+    </iframe>
+  </div>
+  <div class="location-map__content">
+    {{ module.lower_content }}
+  </div>
+  <div class="location-map__extra">
+    <div>
+      <h5>Get In Touch:</h5>
+      <a href="{{ module.contact_link.url.href }}" class="loocation-map__contact">
+        {{ module.contact_text }}
+      </a>
+    </div>
+    <div>
+      <h5>Phone Number:</h5>
+      <a href="tel:{{ module.phone_number | regex_replace("[^+0-9]+", "") }}" class="loocation-map__phone">
+        {{ module.phone_number }}
+      </a>
+    </div>
+  </div>
+</div>
