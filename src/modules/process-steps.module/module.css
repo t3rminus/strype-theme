@@ -14,8 +14,8 @@
   position: relative;
 }
 
-.process-steps__list-item:nth-child(even) {
-  flex-direction: row-reverse;
+.process-steps__list-item:nth-child(even) .process-steps__image {
+  order: 2;
 }
 
 .process-steps__list-item::before {
@@ -61,12 +61,14 @@
 
 @media (min-width: 1024px) {
   .process-steps__list-item {
-    display: flex;
-    margin: 0 -3rem 8rem -3rem;
+    display: grid;
+    margin: 0 0 8rem 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6rem;
   }
 
   .process-steps__image, .process-steps__content {
-    margin: 0 3rem;
+    margin: 0;
   }
 
   .process-steps__list-item::after {
