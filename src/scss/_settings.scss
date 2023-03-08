@@ -18,12 +18,18 @@ $breakpoint-fullsize: $container-width;
 // ---------
 $white: #FFF;
 $black: #141414;
+
 $primary: string.unquote("{{ theme.global_colors.primary.color }}");
 $secondary: string.unquote("{{ theme.global_colors.secondary.color }}");
 $primary-rgb: string.unquote("{{ theme.global_colors.primary.color | convert_rgb }}");
 $secondary-rgb: string.unquote("{{ theme.global_colors.secondary.color | convert_rgb }}");
 $primary-light: string.unquote("{{ color_variant(theme.global_colors.primary.color, 20) }}");
 $primary-light-rgb: string.unquote("{{ color_variant(theme.global_colors.primary.color, 20) | convert_rgb }}");
+$secondary-light: string.unquote("{{ color_variant(theme.global_colors.secondary.color, 20) }}");
+$secondary-light-rgb: string.unquote("{{ color_variant(theme.global_colors.secondary.color, 20) | convert_rgb }}");
+
+$footer-bg: #012441;
+$footer-text: #667C8D;
 
 // 4. Typography
 // -------------
@@ -33,10 +39,10 @@ $weight-medium: 500;
 $weight-semibold: 600;
 $weight-bold: 700;
 
-$body-font-color: $primary;
-$body-font-family: 'Lato', sans-serif;
+$body-font-color: $black;
+$body-font-family: "nimbus-sans", sans-serif;
 $body-font-weight: $weight-normal;
-$body-font-size: 20px;
+$body-font-size: 17px;
 
 // 3. Misc
 // -------

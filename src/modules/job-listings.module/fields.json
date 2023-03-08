@@ -1,0 +1,80 @@
+[ {
+  "id" : "3738fb5e-bcd1-ef2a-aefb-c493983c0d8b",
+  "name" : "bottom_content",
+  "display_width" : null,
+  "label" : "Bottom Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+}, {
+  "id" : "0e156b65-2e30-5a15-348d-4b888d4e0b62",
+  "name" : "address",
+  "display_width" : null,
+  "label" : "Address",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "b959bfea-ded6-9ff2-68e8-36b4dfcf9979",
+    "name" : "address_heading",
+    "display_width" : null,
+    "label" : "Address Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "5bdedaac-69be-48c5-d1ac-9f85b95bc452",
+    "name" : "address_content",
+    "display_width" : null,
+    "label" : "Address Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  }, {
+    "id" : "fcc1bb83-9a7a-bb38-ff6b-6cac9dc3bbc9",
+    "name" : "address_link",
+    "display_width" : null,
+    "label" : "Address Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "ded0f104-b977-e285-26ef-a15665360f6f",
+    "name" : "address_link_text",
+    "display_width" : null,
+    "label" : "Address Link Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "address_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]

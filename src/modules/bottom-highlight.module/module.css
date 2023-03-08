@@ -13,7 +13,7 @@
   width: 100%;
   padding: 52px 64px;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 1px center; /* ensures the image overlaps the right side so there's no orange gap */
   background-size: cover;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1227 241' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon fill='%23215E8F' fill-rule='nonzero' points='1227 0 1227 241 687 241 897 0'%3E%3C/polygon%3E%3C/svg%3E");
   display: flex;
@@ -34,9 +34,9 @@
 .bottom-highlight__content-link {
   flex: 0 0 auto;
   margin-left: 3rem;
-  color: #FFF;
 }
 
-.bottom-highlight__content-link .stripe-button {
+.bottom-highlight__content-link .strype-button {
+  color: #FFF;
   margin: -52px 0;
 }

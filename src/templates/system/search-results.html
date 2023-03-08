@@ -1,17 +1,12 @@
 <!--
   templateType: search_results_page
   isAvailableForNewContent: true
-  label: Boilerplate - search results
-  screenshotPath: ../../images/template-previews/search-results.png
+  label: Search Results
 -->
-{% set template_css = "../../css/templates/system.css" %}
 {% extends "../layouts/base.html" %}
-{# pageTitle is used on system templates for setting a value for the title tag #}
-{% set pageTitle = "Search results" %}
-
 {% block body %}
-<section class="content-wrapper">
-  <div class="systems-page systems-page--search-results">
+<div class="systems-page systems-page--search-results">
+  <div class="search-results__header">
     {% module_block module "search_results_content"
       label="Search results heading",
       path="@hubspot/rich_text"
@@ -20,9 +15,12 @@
         <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
       {% end_module_attribute %}
     {% end_module_block %}
-    {% module "search_results"
-      path="@hubspot/search_results"
-    %}
   </div>
-</section>
+  <section class="content-wrapper">
+    {% module "search_results"
+      path="../../modules/search_results"
+      display_featured_images="true"
+    %}
+  </section>
+</div>
 {% endblock body %}

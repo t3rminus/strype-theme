@@ -7,16 +7,16 @@ $circle-size: 52px;
   display: inline-block;
   z-index: 0;
   position: relative;
-  font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.2rem;
   padding-right: 32px;
-  color: inherit;
 }
 
-.strype-button__link:hover {
-  font-weight: bold;
-  color: inherit;
+.strype-button__link {
+  &, &:hover, &:active, &:focus, &:visited {
+    font-weight: bold;
+    color: inherit;
+  }
 }
 
 .strype-button__link::before {
@@ -31,19 +31,42 @@ $circle-size: 52px;
   background-color: $primary;
   border-radius: 50%;
   z-index: -1;
-  outline: 10px solid unquote('rgba(' + $primary-rgb + ', 0.6)');
+  transition: all 200ms ease-in-out;
+}
+
+.strype-button__link::after {
+  content: '\200B';
+  display: block;
+  position: absolute;
+  width: ($circle-size) * 2;
+  height: ($circle-size) * 2;
+  top: -($circle-size);
+  top: calc(#{-($circle-size)} + 0.6rem);
+  left: -($circle-size);
+  background-color: unquote('rgba(' + $primary-rgb + ', 0.6)');
+  border-radius: 50%;
+  z-index: -2;
   transition: all 200ms ease-in-out;
 }
 
 .strype-button__link:hover::before,
 .strype-button__link:focus::before {
-  outline: 16px solid unquote('rgba(' + $primary-light-rgb + ', 0.6)');
   background-color: $primary-light;
+}
+
+.strype-button__link:hover::after,
+.strype-button__link:focus::after {
+  transform: scale(1.1);
+  background-color: unquote('rgba(' + $primary-light-rgb + ', 0.6)');
 }
 
 .strype-button__link:active::before {
   outline: 10px solid unquote('rgba(' + $primary-rgb + ', 0.6)');
   background-color: $primary;
+}
+
+.strype-button__link:active::after {
+  background-color: unquote('rgba(' + $primary-rgb + ', 0.6)');
 }
 
 .strype-button__arrow {

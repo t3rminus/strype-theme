@@ -1,0 +1,109 @@
+.hs-search-results__listing {
+  margin: 0;
+  padding: 30px 0;
+  list-style: none;
+  display: grid;
+  gap: 4rem 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .hs-search-results__listing {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.hs-search-results__listing li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.hs-search-results__link,
+.hs-search-results__link:hover,
+.hs-search-results__link:focus,
+.hs-search-results__link:active,
+.hs-search-results__link:visited {
+  color: #000;
+}
+
+.hs-search-results__link::before {
+  content: '\200B';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 56px 56px;
+}
+
+.hs-search-results__link::after {
+  content: '\200B';
+  position: absolute;
+  display: block;
+  bottom: 10px;
+  right: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16px' height='16px' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFFFFF' fill-rule='nonzero' d='M8.61289944,0.209704612 L8.70710678,0.292893219 L15.7071068,7.29289322 C15.7425008,7.32828727 15.774687,7.36567442 15.8036654,7.40469339 L15.8753288,7.5159379 L15.8753288,7.5159379 L15.9287745,7.62866398 L15.9287745,7.62866398 L15.9641549,7.73400703 L15.9641549,7.73400703 L15.9930928,7.8819045 L15.9930928,7.8819045 L16,8 L16,8 L15.9972121,8.07523854 L15.9972121,8.07523854 L15.9797599,8.20072576 L15.9797599,8.20072576 L15.9502619,8.31214252 L15.9502619,8.31214252 L15.9063266,8.42322155 L15.9063266,8.42322155 L15.8540045,8.52070875 L15.8540045,8.52070875 L15.7803112,8.62544899 L15.7803112,8.62544899 L15.7071068,8.70710678 L8.70710678,15.7071068 C8.31658249,16.0976311 7.68341751,16.0976311 7.29289322,15.7071068 C6.93240926,15.3466228 6.90467972,14.7793918 7.20970461,14.3871006 L7.29289322,14.2928932 L12.585,9 L1,9 C0.44771525,9 0,8.55228475 0,8 C0,7.48716416 0.38604019,7.06449284 0.883378875,7.00672773 L1,7 L12.585,7 L7.29289322,1.70710678 C6.93240926,1.34662282 6.90467972,0.779391764 7.20970461,0.387100557 L7.29289322,0.292893219 C7.65337718,-0.0675907428 8.22060824,-0.0953202783 8.61289944,0.209704612 Z'%3E%3C/path%3E%3C/svg%3E");
+  width: 16px;
+  height: 16px;
+}
+
+.hs-search-results__featured-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  background-color: #012441;
+}
+
+.hs-search-results__content {
+  padding: 24px 32px;
+}
+
+.hs-search-results__title {
+  margin-bottom: 14px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hs-search-results__description {
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.hs-search-results__listing li::before {
+  display: none;
+}
+
+.hs-search-results__pagination {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.hs-search-results__link-page {
+  margin: 0 0 30px 0;
+  flex: 0 0 auto;
+  background-color: #FFf;
+  border: 1px solid #000;
+  color: #000;
+
+  display: block;
+  padding: 12px 16px;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.hs-search-results__prev-page {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.hs-search-results__next-page {
+  margin-right: 0;
+  margin-left: auto;
+}

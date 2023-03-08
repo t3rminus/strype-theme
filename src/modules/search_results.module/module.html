@@ -1,0 +1,36 @@
+{% require_css %}
+  <style>
+    {% scope_css %}
+      .hs-search-results__link::before {
+        border-color: transparent transparent {{ theme.global_colors.primary.color }} transparent;
+      }
+      .hs-search-results__link-page {
+          background-color: {{ theme.global_colors.primary.color }};
+          border-color: {{ theme.global_colors.primary.color }};
+          color: #FFF;
+      }
+    {% end_scope_css %}
+  </style>
+{% end_require_css %}
+<div class="hs-search-results">
+  <template class="hs-search-results__template">
+    <li>
+      <a href="#" class="hs-search-results__link">
+        {% if module.display_featured_images %}
+          <div class="hs-search-results__featured-image">
+            <img src="">
+          </div>
+        {% endif %}
+        <div class="hs-search-results__content">
+          <h1 class="hs-search-results__title">Content Title</h1>
+          <div class="hs-search-results__description">Description</div>
+        </div>
+      </a>
+    </li>
+  </template>
+  <ul id="hsresults" class="hs-search-results__listing"></ul>
+  <div class="hs-search-results__pagination" data-search-path="{{ site_settings.content_search_results_page_path }}">
+    <a href="" class="hs-search-results__link-page hs-search-results__prev-page"></a>
+    <a href="" class="hs-search-results__link-page hs-search-results__next-page"></a>
+  </div>
+</div>

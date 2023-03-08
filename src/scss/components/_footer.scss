@@ -2,7 +2,16 @@
   background-color: #012441;
 
   &, * {
-    color: #667C8D;
+    color: $footer-text;
+  }
+
+  a {
+    color: $footer-text;
+
+    a:hover, a:focus, a:active, a:visited {
+      color: $footer-text;
+      text-decoration: underline;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
